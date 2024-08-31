@@ -44,6 +44,6 @@ jobs:
         uses: alsi-lawr/deploy-nuget@v1
         with:
           project: 'src'
-          version: ${{ github.event.release.tag_name }}
+          version: ${{ github.ref_name }}
           nuget-api-key: ${{ secrets.NUGET_API_KEY }}
           dotnet-version: '8.0'
