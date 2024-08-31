@@ -17,7 +17,7 @@ jobs:
 
       - name: Test and generate report
         id: run-tests
-        uses: alsi-lawr/dotnet-test-coverage@v1
+        uses: alsi-lawr/dotnet-test-coverlet@v1
         with:
           dotnet-version: '8.0'
           project: 'tests/unit'
