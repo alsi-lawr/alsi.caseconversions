@@ -47,7 +47,7 @@ jobs:
             /p:RepositoryBranch=${{ github.ref_name }} \
             /p:RepositoryCommit=${{ github.sha }} \
             /p:GeneratePackageOnBuild=true \
-            /p:Version=${{ steps.previoustag.outputs.tag }}-${{ github.run_number }}-alpha \
+            /p:Version=${{ steps.previoustag.outputs.tag }}-rc.${{ github.run_number }} \
             /p:BaseOutputPath=bin/ \
             --no-incremental
           dotnet nuget push "$DEPLOY_NUGET_PROJECT/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
