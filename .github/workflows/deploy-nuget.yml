@@ -1,0 +1,86 @@
+name: NuGet Deployment
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+
+env:
+  DEPLOY_NUGET_PROJECT: "src"
+  DEPLOY_NUGET_PACKAGE_NAME: "ALSI.CaseConversions" 
+
+jobs:
+  deploy-nuget-prerelease:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/dotnet/sdk:8.0
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set version for pre-release
+        run: echo "VERSION=$(git describe --tags --long --match "v[0-9]*" --always)" >> $GITHUB_ENV
+
+      - name: Deploy to NuGet
+        run: |
+          dotnet --version
+          echo $DEPLOY_NUGET_PROJECT
+          sudo update-ca-certificates
+          dotnet restore -s "https://api.nuget.org/v3/index.json" $DEPLOY_NUGET_PROJECT
+          dotnet add $DEPLOY_NUGET_PROJECT package Microsoft.SourceLink.GitHub
+          dotnet build $DEPLOY_NUGET_PROJECT -c Release \
+            /p:ContinuousIntegrationBuild=true \
+            /p:EmbedUntrackedSources=true \
+            /p:PublishRepositoryUrl=true \
+            /p:GenerateDocumentationFile=true \
+            /p:IncludeSymbols=true \
+            /p:SymbolPackageFormat=snupkg \
+            /p:NoWarn=CS1591 \
+            /p:RepositoryBranch=${{ github.ref_name }} \
+            /p:RepositoryCommit=${{ github.sha }} \
+            /p:GeneratePackageOnBuild=true \
+            /p:Version=${{ env.VERSION }}-${{ github.run_number }}-alpha \
+            /p:BaseOutputPath=bin/ \
+            --no-incremental
+          dotnet nuget push "$DEPLOY_NUGET_PROJECT/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+
+          dotnet build src/ALSI.CaseConversions -c Release /p:ContinuousIntegrationBuild=true /p:EmbedUntrackedSources=true /p:PublishRepositoryUrl=true /p:GenerateDocumentationFile=true /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg /p:NoWarn=CS1591 /p:GeneratePackageOnBuild=true /p:BaseOutputPath=bin/ --no-incremental
+  deploy-nuget-release:
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/dotnet/sdk:8.0
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set version for release
+        run: echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+
+      - name: Deploy to NuGet
+        run: |
+          dotnet --version
+          echo $DEPLOY_NUGET_PROJECT
+          sudo update-ca-certificates
+          dotnet restore -s "https://api.nuget.org/v3/index.json" $DEPLOY_NUGET_PROJECT
+          dotnet add $DEPLOY_NUGET_PROJECT package Microsoft.SourceLink.GitHub
+          dotnet build $DEPLOY_NUGET_PROJECT -c Release \
+            /p:ContinuousIntegrationBuild=true \
+            /p:EmbedUntrackedSources=true \
+            /p:PublishRepositoryUrl=true \
+            /p:GenerateDocumentationFile=true \
+            /p:IncludeSymbols=true \
+            /p:SymbolPackageFormat=snupkg \
+            /p:NoWarn=CS1591 \
+            /p:RepositoryBranch=${{ github.ref_name }} \
+            /p:RepositoryCommit=${{ github.sha }} \
+            /p:GeneratePackageOnBuild=true \
+            /p:Version=${{ env.VERSION }} \
+            /p:BaseOutputPath=bin/ \
+            --no-incremental
+          dotnet nuget push "$DEPLOY_NUGET_PROJECT/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
+
+
