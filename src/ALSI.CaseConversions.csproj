@@ -3,7 +3,10 @@
         <ProjectType>Class Library</ProjectType>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>11</LangVersion>
-		<EnablePreviewFeatures>true</EnablePreviewFeatures>
+        <EnablePreviewFeatures>true</EnablePreviewFeatures>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <Description>A .NET library that converts various string formats into other cases. It provides robust handling of different casing conventions, separators, and special characters, making it an ideal utility for consistent string formatting in your applications.</Description>
+        <Tags>casing conversion string-manipulation cases csharp dotnet</Tags>
     </PropertyGroup>
 
     <ItemGroup>
