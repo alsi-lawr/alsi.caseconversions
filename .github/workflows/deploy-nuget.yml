@@ -48,9 +48,6 @@ jobs:
             --no-incremental
           dotnet nuget push "$DEPLOY_NUGET_PROJECT/bin/Release/*.nupkg" --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
 
-          dotnet build src/ALSI.CaseConversions -c Release /p:ContinuousIntegrationBuild=true /p:EmbedUntrackedSources=true /p:PublishRepositoryUrl=true /p:GenerateDocumentationFile=true /p:IncludeSymbols=true /p:SymbolPackageFormat=snupkg /p:NoWarn=CS1591 /p:GeneratePackageOnBuild=true /p:BaseOutputPath=bin/ --no-incremental
-  
-
   deploy-nuget-release:
     if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
