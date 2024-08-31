@@ -23,7 +23,7 @@ jobs:
           project: 'tests/unit'
           threshold: 0
 
-      - name: Uploade repoprt to artifacts
+      - name: Upload report to artifacts
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
