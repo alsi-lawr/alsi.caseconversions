@@ -3,6 +3,7 @@
 [![NuGet Version](https://img.shields.io/nuget/v/ALSI.CaseConversions.svg?style=flat)](https://www.nuget.org/packages/ALSI.CaseConversions/)
 [![Build Status](https://github.com/alsi-lawr/alsi.caseconversions/actions/workflows/deploy-nuget.yml/badge.svg)](https://github.com/alsi-lawr/ALSI.CaseConversions/actions)
 [![Downloads](https://img.shields.io/nuget/dt/ALSI.CaseConversions.svg?logo=nuget&logoSize=auto)](https://www.nuget.org/packages/ALSI.CaseConversions)
+[![codecov](https://codecov.io/gh/alsi-lawr/alsi.caseconversions/graph/badge.svg)](https://codecov.io/gh/alsi-lawr/alsi.caseconversions)
 
 **ALSI.CaseConversions** is a .NET library that converts various string formats into other cases. It provides robust handling of different casing conventions, separators, and special characters, making it an ideal utility for consistent string formatting in your applications.
 
