@@ -23,7 +23,6 @@ jobs:
       
       - name: Set version for pre-release
         run: |
-          git config --add safe.directory /__w/alsi.caseconversions/alsi.caseconversions
           echo "VERSION=$(git describe --tags --long --match "v[0-9]*" --always)" >> $GITHUB_ENV
 
       - name: Deploy to NuGet
@@ -59,7 +58,6 @@ jobs:
       
       - name: Set version for release
         run: |
-          git config --add safe.directory /__w/alsi.caseconversions/alsi.caseconversions
           echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
 
       - name: Deploy to NuGet
