@@ -26,7 +26,7 @@ jobs:
       - name: Deploy to NuGet
         uses: alsi-lawr/deploy-nuget@v1
         with:
-          deploy-nuget-project: 'src'
+          project: 'src'
           version: '${{ steps.previoustag.outputs.tag }}-rc.${{ github.run_number }}'
           nuget-api-key: ${{ secrets.NUGET_API_KEY }}
           dotnet-version: '8.0'
@@ -43,7 +43,7 @@ jobs:
       - name: Deploy to NuGet
         uses: alsi-lawr/deploy-nuget@v1
         with:
-          deploy-nuget-project: 'src'
+          project: 'src'
           version: ${{ github.event.release.tag_name }}
           nuget-api-key: ${{ secrets.NUGET_API_KEY }}
           dotnet-version: '8.0'
