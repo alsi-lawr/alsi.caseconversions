@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/dotnet/sdk:8.0
+      options: --user 1001
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -56,6 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/dotnet/sdk:8.0
+      options: --user 1001
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
