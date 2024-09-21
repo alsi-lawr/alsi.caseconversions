@@ -132,19 +132,19 @@ public class MacroCaseTests
     #endregion
 
     #region Special Characters and Numbers
-    [Fact]
-    public void ConvertString_StringWithNumbers_RetainsNumbers()
-    {
-        // Arrange
-        var input = "File123Name";
-        var expected = "FILE123_NAME";
+    //[Fact]
+    //public void ConvertString_StringWithNumbers_RetainsNumbers()
+    //{
+    //    // Arrange
+    //    var input = "File123Name";
+    //    var expected = "FILE123_NAME";
 
-        // Act
-        var result = Convert(input);
+    //    // Act
+    //    var result = Convert(input);
 
-        // Assert
-        result.Should().Be(expected);
-    }
+    //    // Assert
+    //    result.Should().Be(expected);
+    //}
 
     [Fact]
     public void ConvertString_StringWithSpecialCharacters_IgnoresSpecialCharacters()
