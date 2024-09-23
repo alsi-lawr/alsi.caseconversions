@@ -59,7 +59,7 @@ public class SnakeCaseFormatterTests
         var result = System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("Hello");
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("HelloWorld");
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(string.Empty);
-        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(null ?? string.Empty);
+        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(string.Empty);
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("A");
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("AA");
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("camelCaseInput");

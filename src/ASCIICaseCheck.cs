@@ -57,9 +57,10 @@ internal static class ASCIICaseCheck
     [MethodImpl(MethodImplOptions.AggressiveOptimization | MethodImplOptions.AggressiveInlining)]
     public static bool IsDelimiterChar(char c) => (LatinCharInfo[c] & DelimiterOrUpper) != 0;
 
-    [MethodImpl(MethodImplOptions.AggressiveOptimization | MethodImplOptions.AggressiveInlining)]
+    // This only works because other chars are pre-selected out before converting
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static char ToLower(char c) => (char)(c | 0x20);
 
-    [MethodImpl(MethodImplOptions.AggressiveOptimization | MethodImplOptions.AggressiveInlining)]
-    public static char ToUpper(char c) => (char)(c & ~0x20);
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static char ToUpper(char c) => IsLower(c) ? (char)(c & ~0x20) : c;
 }
