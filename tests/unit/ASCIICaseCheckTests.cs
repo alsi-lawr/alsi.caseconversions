@@ -103,4 +103,93 @@ public class ASCIICaseCheckTests
         ASCIICaseCheck.IsDelimiterChar('a').Should().BeFalse(); // Lowercase letter
         ASCIICaseCheck.IsDelimiterChar('0').Should().BeFalse(); // Digit
     }
+
+    [Fact]
+    public void GivenUpperCase_WhenConvertToLower_ShouldReturnLowercase()
+    {
+        ASCIICaseCheck.ToLower('A').Should().Be('a');
+        ASCIICaseCheck.ToLower('Z').Should().Be('z');
+        ASCIICaseCheck.ToLower('B').Should().Be('b');
+        ASCIICaseCheck.ToLower('C').Should().Be('c');
+        ASCIICaseCheck.ToLower('D').Should().Be('d');
+        ASCIICaseCheck.ToLower('E').Should().Be('e');
+        ASCIICaseCheck.ToLower('F').Should().Be('f');
+        ASCIICaseCheck.ToLower('G').Should().Be('g');
+        ASCIICaseCheck.ToLower('H').Should().Be('h');
+        ASCIICaseCheck.ToLower('I').Should().Be('i');
+        ASCIICaseCheck.ToLower('J').Should().Be('j');
+        ASCIICaseCheck.ToLower('K').Should().Be('k');
+        ASCIICaseCheck.ToLower('L').Should().Be('l');
+        ASCIICaseCheck.ToLower('M').Should().Be('m');
+        ASCIICaseCheck.ToLower('N').Should().Be('n');
+        ASCIICaseCheck.ToLower('O').Should().Be('o');
+        ASCIICaseCheck.ToLower('P').Should().Be('p');
+        ASCIICaseCheck.ToLower('Q').Should().Be('q');
+        ASCIICaseCheck.ToLower('R').Should().Be('r');
+        ASCIICaseCheck.ToLower('S').Should().Be('s');
+        ASCIICaseCheck.ToLower('T').Should().Be('t');
+        ASCIICaseCheck.ToLower('U').Should().Be('u');
+        ASCIICaseCheck.ToLower('V').Should().Be('v');
+        ASCIICaseCheck.ToLower('W').Should().Be('w');
+        ASCIICaseCheck.ToLower('X').Should().Be('x');
+        ASCIICaseCheck.ToLower('Y').Should().Be('y');
+        ASCIICaseCheck.ToLower('Z').Should().Be('z');
+        ASCIICaseCheck.ToLower('0').Should().Be('0');
+        ASCIICaseCheck.ToLower('1').Should().Be('1');
+        ASCIICaseCheck.ToLower('2').Should().Be('2');
+        ASCIICaseCheck.ToLower('3').Should().Be('3');
+        ASCIICaseCheck.ToLower('4').Should().Be('4');
+        ASCIICaseCheck.ToLower('5').Should().Be('5');
+        ASCIICaseCheck.ToLower('6').Should().Be('6');
+        ASCIICaseCheck.ToLower('7').Should().Be('7');
+        ASCIICaseCheck.ToLower('8').Should().Be('8');
+        ASCIICaseCheck.ToLower('9').Should().Be('9');
+        ASCIICaseCheck.ToLower(' ').Should().Be(' ');
+        ASCIICaseCheck.ToLower('a').Should().Be('a');
+    }
+
+    [Fact]
+    public void GivenLowerCase_WhenConvertToUpper_ShouldReturnUppercase()
+    {
+        ASCIICaseCheck.ToUpper('a').Should().Be('A');
+        ASCIICaseCheck.ToUpper('z').Should().Be('Z');
+        ASCIICaseCheck.ToUpper('b').Should().Be('B');
+        ASCIICaseCheck.ToUpper('c').Should().Be('C');
+        ASCIICaseCheck.ToUpper('d').Should().Be('D');
+        ASCIICaseCheck.ToUpper('e').Should().Be('E');
+        ASCIICaseCheck.ToUpper('f').Should().Be('F');
+        ASCIICaseCheck.ToUpper('g').Should().Be('G');
+        ASCIICaseCheck.ToUpper('h').Should().Be('H');
+        ASCIICaseCheck.ToUpper('i').Should().Be('I');
+        ASCIICaseCheck.ToUpper('j').Should().Be('J');
+        ASCIICaseCheck.ToUpper('k').Should().Be('K');
+        ASCIICaseCheck.ToUpper('l').Should().Be('L');
+        ASCIICaseCheck.ToUpper('m').Should().Be('M');
+        ASCIICaseCheck.ToUpper('n').Should().Be('N');
+        ASCIICaseCheck.ToUpper('o').Should().Be('O');
+        ASCIICaseCheck.ToUpper('p').Should().Be('P');
+        ASCIICaseCheck.ToUpper('q').Should().Be('Q');
+        ASCIICaseCheck.ToUpper('r').Should().Be('R');
+        ASCIICaseCheck.ToUpper('s').Should().Be('S');
+        ASCIICaseCheck.ToUpper('t').Should().Be('T');
+        ASCIICaseCheck.ToUpper('u').Should().Be('U');
+        ASCIICaseCheck.ToUpper('v').Should().Be('V');
+        ASCIICaseCheck.ToUpper('w').Should().Be('W');
+        ASCIICaseCheck.ToUpper('x').Should().Be('X');
+        ASCIICaseCheck.ToUpper('y').Should().Be('Y');
+        ASCIICaseCheck.ToUpper('z').Should().Be('Z');
+        ASCIICaseCheck.ToUpper('0').Should().Be('0');
+        ASCIICaseCheck.ToUpper('0').Should().Be('0');
+        ASCIICaseCheck.ToUpper('1').Should().Be('1');
+        ASCIICaseCheck.ToUpper('2').Should().Be('2');
+        ASCIICaseCheck.ToUpper('3').Should().Be('3');
+        ASCIICaseCheck.ToUpper('4').Should().Be('4');
+        ASCIICaseCheck.ToUpper('5').Should().Be('5');
+        ASCIICaseCheck.ToUpper('6').Should().Be('6');
+        ASCIICaseCheck.ToUpper('7').Should().Be('7');
+        ASCIICaseCheck.ToUpper('8').Should().Be('8');
+        ASCIICaseCheck.ToUpper('9').Should().Be('9');
+        ASCIICaseCheck.ToUpper(' ').Should().Be(' ');
+        ASCIICaseCheck.ToUpper('A').Should().Be('A');
+    }
 }
