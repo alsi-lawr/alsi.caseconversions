@@ -14,6 +14,8 @@
 - **camelCase**
 - **kebab-case**
 - **dot.case**
+- **MACRO_CASE**
+- **Sentence Case**
 
 ## Getting Started
 
@@ -32,8 +34,6 @@ Install-Package ALSI.CaseConversions
 ```
 
 ### Usage
-
-The primary method exposed by `ALSI.CaseConversions` is `ToSnakeCase`, a static method that converts strings into `snake_case` format.
 
 #### Basic Example
 
