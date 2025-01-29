@@ -15,6 +15,7 @@
 - **kebab-case**
 - **dot.case**
 - **MACRO_CASE**
+- **Sentence Case**
 
 ## Getting Started
 
