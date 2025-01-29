@@ -26,4 +26,8 @@
 			<_Parameter1>$(MSBuildProjectName).Benchmarks</_Parameter1>
 		</AssemblyAttribute>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.Text.Json" />
+	</ItemGroup>
 </Project>
