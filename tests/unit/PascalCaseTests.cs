@@ -1,7 +1,7 @@
 ﻿namespace ALSI.CaseConversions.UnitTests;
 
 using ALSI.CaseConversions;
-using FluentAssertions;
+using Shouldly;
 
 public class PascalCaseTests
 {
@@ -18,7 +18,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -32,7 +32,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -45,7 +45,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().BeEmpty();
+        result.ShouldBeEmpty();
     }
 
     [Fact]
@@ -58,7 +58,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(string.Empty);
+        result.ShouldBe(string.Empty);
     }
 
     [Fact]
@@ -72,7 +72,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -86,7 +86,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -100,7 +100,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -114,7 +114,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -128,7 +128,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     #endregion
@@ -146,7 +146,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -160,7 +160,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -174,7 +174,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -188,7 +188,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -202,7 +202,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -216,7 +216,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -230,7 +230,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -244,7 +244,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     #endregion
@@ -262,7 +262,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -276,7 +276,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -290,7 +290,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -304,7 +304,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -318,7 +318,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     [Fact]
@@ -332,7 +332,7 @@ public class PascalCaseTests
         var result = PascalCase.Convert(input);
 
         // Assert
-        result.Should().Be(expected);
+        result.ShouldBe(expected);
     }
 
     #endregion
