@@ -1,28 +1,25 @@
-﻿using System.Globalization;
-using System.Text.RegularExpressions;
-using ALSI.CaseConversions;
-using BenchmarkDotNet.Attributes;
+﻿using BenchmarkDotNet.Attributes;
 
 namespace ALSI.CaseConversions.IntegrationTests;
 
-//[MemoryDiagnoser(true)]
+[MemoryDiagnoser(true)]
 public class SnakeCaseFormatterTests
 {
-    // [Benchmark]
-    // public string ALSI_CaseConversions_SnakeConversion_RentedBuffer()
-    // {
-    //     var input = string.Concat(Enumerable.Repeat("HelloWorldExample", 16));
+    [Benchmark]
+    public string ALSI_CaseConversions_SnakeConversion_RentedBuffer()
+    {
+        var input = string.Concat(Enumerable.Repeat("HelloWorldExample", 16));
 
-    //     return SnakeCase.Converter.ToSnakeCase(input);
-    // }
+        return SnakeCase.Converter.Convert(input);
+    }
 
-    // [Benchmark]
-    // public string System_Text_Json_SnakeConversion_RentedBuffer()
-    // {
-    //     var input = string.Concat(Enumerable.Repeat("HelloWorldExample", 16));
+    [Benchmark]
+    public string System_Text_Json_SnakeConversion_RentedBuffer()
+    {
+        var input = string.Concat(Enumerable.Repeat("HelloWorldExample", 16));
 
-    //     return System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(input);
-    // }
+        return System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(input);
+    }
 
     [Benchmark]
     public string ALSI_CaseConversions_SnakeConversion()
@@ -70,13 +67,23 @@ public class SnakeCaseFormatterTests
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("Hello World");
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("  Hello World  ");
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("HelloWorldExample");
-        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("hello_world_example");
-        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("Hello-World-Example");
-        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("Hello.World.Example");
+        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(
+            "hello_world_example"
+        );
+        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(
+            "Hello-World-Example"
+        );
+        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(
+            "Hello.World.Example"
+        );
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(" \t\r\n");
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("XMLRequest");
-        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("_Hello.World.Example");
-        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("Hello.World.Example_");
+        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(
+            "_Hello.World.Example"
+        );
+        result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName(
+            "Hello.World.Example_"
+        );
         result += System.Text.Json.JsonNamingPolicy.SnakeCaseLower.ConvertName("HelloWorldExamplE");
         return result;
     }

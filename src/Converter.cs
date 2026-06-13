@@ -38,7 +38,10 @@ internal static class Converter<TConverter>
     }
 
     [MethodImpl(MethodImplOptions.AggressiveOptimization | MethodImplOptions.AggressiveInlining)]
-    private static int WriteToBuffer(ReadOnlySpan<char> stringToConvert, ref Span<char> destinationBuffer)
+    private static int WriteToBuffer(
+        ReadOnlySpan<char> stringToConvert,
+        ref Span<char> destinationBuffer
+    )
     {
         int charsWritten = 0;
         for (int i = 0; i < stringToConvert.Length; i++)
@@ -56,21 +59,35 @@ internal static class Converter<TConverter>
                         IsUpper(stringToConvert[i])
                         && (
                             !IsUpper(stringToConvert[i - 1])
-                            || !IsDelimiterChar(i == stringToConvert.Length - 1 ? NUL : stringToConvert[i + 1])
+                            || !IsDelimiterChar(
+                                i == stringToConvert.Length - 1 ? NUL : stringToConvert[i + 1]
+                            )
                         )
                     ) || IsDelimiter(stringToConvert[i - 1])
                 )
             )
             {
-                TConverter.SeparatorConversion(ref destinationBuffer, ref charsWritten, stringToConvert[i]);
+                TConverter.SeparatorConversion(
+                    ref destinationBuffer,
+                    ref charsWritten,
+                    stringToConvert[i]
+                );
             }
             else if (charsWritten == 0)
             {
-                TConverter.FirstCharConversion(ref destinationBuffer, ref charsWritten, stringToConvert[i]);
+                TConverter.FirstCharConversion(
+                    ref destinationBuffer,
+                    ref charsWritten,
+                    stringToConvert[i]
+                );
             }
             else
             {
-                TConverter.UnseparatedConversion(ref destinationBuffer, ref charsWritten, stringToConvert[i]);
+                TConverter.UnseparatedConversion(
+                    ref destinationBuffer,
+                    ref charsWritten,
+                    stringToConvert[i]
+                );
             }
         }
 
