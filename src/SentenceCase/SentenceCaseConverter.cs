@@ -1,6 +1,4 @@
-namespace ALSI.CaseConversions.SentenceCase;
-
-using ALSI.CaseConversions;
+namespace ALSI.CaseConversions;
 
 internal readonly struct SentenceCaseConverter : ICaseConverter
 {

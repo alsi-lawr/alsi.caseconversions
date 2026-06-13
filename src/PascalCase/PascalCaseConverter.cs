@@ -1,6 +1,4 @@
-namespace ALSI.CaseConversions.PascalCase;
-
-using ALSI.CaseConversions;
+namespace ALSI.CaseConversions;
 
 internal readonly struct PascalCaseConverter : ICaseConverter
 {

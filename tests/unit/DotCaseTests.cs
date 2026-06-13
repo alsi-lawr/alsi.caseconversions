@@ -1,7 +1,7 @@
 ﻿namespace ALSI.CaseConversions.UnitTests;
 
+using ALSI.CaseConversions;
 using FluentAssertions;
-using static ALSI.CaseConversions.DotCase.Converter;
 
 public class DotCaseTests
 {
@@ -15,7 +15,7 @@ public class DotCaseTests
         var expected = "hello";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -29,7 +29,7 @@ public class DotCaseTests
         var expected = "hello.world";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -42,7 +42,7 @@ public class DotCaseTests
         var input = string.Empty;
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().BeEmpty();
@@ -55,7 +55,7 @@ public class DotCaseTests
         string? input = null;
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(string.Empty);
@@ -69,7 +69,7 @@ public class DotCaseTests
         var expected = "a";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -83,7 +83,7 @@ public class DotCaseTests
         var expected = "aa";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -97,7 +97,7 @@ public class DotCaseTests
         var expected = "snake.case.input";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -111,7 +111,7 @@ public class DotCaseTests
         var expected = "pascal.case.input";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -125,7 +125,7 @@ public class DotCaseTests
         var expected = "camel.case.input";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -143,7 +143,7 @@ public class DotCaseTests
         var expected = "file123.name";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -157,7 +157,7 @@ public class DotCaseTests
         var expected = "helloworld";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -171,7 +171,7 @@ public class DotCaseTests
         var expected = "hello.world";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -185,7 +185,7 @@ public class DotCaseTests
         var expected = "hello.world";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -199,7 +199,7 @@ public class DotCaseTests
         var expected = "hello.world.example";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -213,7 +213,7 @@ public class DotCaseTests
         var expected = "hello.world.example";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -227,7 +227,7 @@ public class DotCaseTests
         var expected = "hello.world.example";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -245,7 +245,7 @@ public class DotCaseTests
         var expected = "";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -259,7 +259,7 @@ public class DotCaseTests
         var expected = "xml.request";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -273,7 +273,7 @@ public class DotCaseTests
         var expected = "hello.world.example";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -287,7 +287,7 @@ public class DotCaseTests
         var expected = "hello.world.example";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -301,7 +301,7 @@ public class DotCaseTests
         var expected = "hello.world.exampl.e";
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -315,7 +315,7 @@ public class DotCaseTests
         var expected = string.Concat(Enumerable.Repeat("hello.world.example", 16));
 
         // Act
-        var result = Convert(input);
+        var result = DotCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);

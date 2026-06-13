@@ -1,11 +1,11 @@
-namespace ALSI.CaseConversions.KebabCase;
+namespace ALSI.CaseConversions;
 
 using System;
 
 /// <summary>
 /// For formatting strings to kebab-case.
 /// </summary>
-public static class Converter
+public static class KebabCase
 {
     /// <summary>
     /// Converts the specified string to kebab-case.
@@ -13,5 +13,5 @@ public static class Converter
     /// <param name="stringToConvert">The string to convert.</param>
     /// <returns>Kebab case version of the string.</returns>
     public static string Convert(ReadOnlySpan<char> stringToConvert) =>
-        Converter<KebabCaseConverter>.ConvertCase(stringToConvert);
+        ConversionEngine<KebabCaseConverter>.ConvertCase(stringToConvert);
 }

@@ -40,7 +40,7 @@ Install-Package ALSI.CaseConversions
 ```csharp
 using ALSI.CaseConversions;
 
-string result = SnakeCase.Converter.Convert("HelloWorld");
+string result = SnakeCase.Convert("HelloWorld");
 // result: "hello_world"
 ```
 
@@ -50,23 +50,23 @@ The converters can handle can handle different types of input formats, using `sn
 
 ```csharp
 // PascalCase to snake_case
-var pascalResult = SnakeCase.Converter.Convert("PascalCaseInput");
+var pascalResult = SnakeCase.Convert("PascalCaseInput");
 // pascalResult: "pascal_case_input"
 
 // camelCase to snake_case
-var camelResult = SnakeCase.Converter.Convert("camelCaseInput");
+var camelResult = SnakeCase.Convert("camelCaseInput");
 // camelResult: "camel_case_input"
 
 // Hyphen-separated words
-var hyphenResult = SnakeCase.Converter.Convert("Hello-World-Example");
+var hyphenResult = SnakeCase.Convert("Hello-World-Example");
 // hyphenResult: "hello_world_example"
 
 // Dot-separated words
-var dotResult = SnakeCase.Converter.Convert("Hello.World.Example");
+var dotResult = SnakeCase.Convert("Hello.World.Example");
 // dotResult: "hello_world_example"
 
 // Mixed case with numbers
-var mixedResult = SnakeCase.Converter.Convert("File123Name");
+var mixedResult = SnakeCase.Convert("File123Name");
 // mixedResult: "file123_name"
 ```
 

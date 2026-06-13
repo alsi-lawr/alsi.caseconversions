@@ -1,6 +1,4 @@
-namespace ALSI.CaseConversions.SnakeCase;
-
-using ALSI.CaseConversions;
+namespace ALSI.CaseConversions;
 
 internal readonly struct SnakeCaseConverter : ICaseConverter
 {

@@ -1,7 +1,7 @@
 namespace ALSI.CaseConversions.UnitTests;
 
+using ALSI.CaseConversions;
 using FluentAssertions;
-using static ALSI.CaseConversions.SnakeCase.Converter;
 
 public class SnakeCaseTests
 {
@@ -14,7 +14,7 @@ public class SnakeCaseTests
         var expected = "hello";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -28,7 +28,7 @@ public class SnakeCaseTests
         var expected = "hello_world";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -41,7 +41,7 @@ public class SnakeCaseTests
         var input = string.Empty;
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().BeEmpty();
@@ -54,7 +54,7 @@ public class SnakeCaseTests
         string? input = null;
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(string.Empty);
@@ -68,7 +68,7 @@ public class SnakeCaseTests
         var expected = "a";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -82,7 +82,7 @@ public class SnakeCaseTests
         var expected = "aa";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -96,7 +96,7 @@ public class SnakeCaseTests
         var expected = "camel_case_input";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -110,7 +110,7 @@ public class SnakeCaseTests
         var expected = "pascal_case_input";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -124,7 +124,7 @@ public class SnakeCaseTests
         var expected = "hello_world";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -140,7 +140,7 @@ public class SnakeCaseTests
         var expected = "file123_name";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -154,7 +154,7 @@ public class SnakeCaseTests
         var expected = "hello_world";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -168,7 +168,7 @@ public class SnakeCaseTests
         var expected = "hello_world";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -182,7 +182,7 @@ public class SnakeCaseTests
         var expected = "hello_world";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -196,7 +196,7 @@ public class SnakeCaseTests
         var expected = "hello_world_example";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -210,7 +210,7 @@ public class SnakeCaseTests
         var expected = "hello_world_example";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -224,7 +224,7 @@ public class SnakeCaseTests
         var expected = "hello_world_example";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -241,7 +241,7 @@ public class SnakeCaseTests
         var expected = "";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -255,7 +255,7 @@ public class SnakeCaseTests
         var expected = "xml_request";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -269,7 +269,7 @@ public class SnakeCaseTests
         var expected = "hello_world_example";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -283,7 +283,7 @@ public class SnakeCaseTests
         var expected = "hello_world_example";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -297,7 +297,7 @@ public class SnakeCaseTests
         var expected = "hello_world_exampl_e";
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -311,7 +311,7 @@ public class SnakeCaseTests
         var expected = string.Concat(Enumerable.Repeat("hello_world_example_", 16))[..^1];
 
         // Act
-        var result = Convert(input);
+        var result = SnakeCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);

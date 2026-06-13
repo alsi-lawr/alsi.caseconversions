@@ -6,4 +6,4 @@ using BenchmarkDotNet.Running;
 
 BenchmarkRunner.Run<SnakeCaseFormatterTests>();
 
-//ALSI.CaseConversions.SnakeCase.Converter.ToSnakeCase("Test String");
+// ALSI.CaseConversions.SnakeCase.Convert("Test String");

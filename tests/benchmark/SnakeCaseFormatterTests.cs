@@ -10,7 +10,7 @@ public class SnakeCaseFormatterTests
     {
         var input = string.Concat(Enumerable.Repeat("HelloWorldExample", 16));
 
-        return SnakeCase.Converter.Convert(input);
+        return SnakeCase.Convert(input);
     }
 
     [Benchmark]
@@ -24,29 +24,29 @@ public class SnakeCaseFormatterTests
     [Benchmark]
     public string ALSI_CaseConversions_SnakeConversion()
     {
-        var result = SnakeCase.Converter.Convert("Hello");
+        var result = SnakeCase.Convert("Hello");
 
-        result += SnakeCase.Converter.Convert("HelloWorld");
-        result += SnakeCase.Converter.Convert(string.Empty);
-        result += SnakeCase.Converter.Convert(null);
-        result += SnakeCase.Converter.Convert("A");
-        result += SnakeCase.Converter.Convert("AA");
-        result += SnakeCase.Converter.Convert("camelCaseInput");
-        result += SnakeCase.Converter.Convert("PascalCaseInput");
-        result += SnakeCase.Converter.Convert("HELLO_WORLD");
-        result += SnakeCase.Converter.Convert("File123Name");
-        result += SnakeCase.Converter.Convert("Hello@World!");
-        result += SnakeCase.Converter.Convert("Hello World");
-        result += SnakeCase.Converter.Convert("  Hello World  ");
-        result += SnakeCase.Converter.Convert("HelloWorldExample");
-        result += SnakeCase.Converter.Convert("hello_world_example");
-        result += SnakeCase.Converter.Convert("Hello-World-Example");
-        result += SnakeCase.Converter.Convert("Hello.World.Example");
-        result += SnakeCase.Converter.Convert(" \t\r\n");
-        result += SnakeCase.Converter.Convert("XMLRequest");
-        result += SnakeCase.Converter.Convert("_Hello.World.Example");
-        result += SnakeCase.Converter.Convert("Hello.World.Example_");
-        result += SnakeCase.Converter.Convert("HelloWorldExamplE");
+        result += SnakeCase.Convert("HelloWorld");
+        result += SnakeCase.Convert(string.Empty);
+        result += SnakeCase.Convert(null);
+        result += SnakeCase.Convert("A");
+        result += SnakeCase.Convert("AA");
+        result += SnakeCase.Convert("camelCaseInput");
+        result += SnakeCase.Convert("PascalCaseInput");
+        result += SnakeCase.Convert("HELLO_WORLD");
+        result += SnakeCase.Convert("File123Name");
+        result += SnakeCase.Convert("Hello@World!");
+        result += SnakeCase.Convert("Hello World");
+        result += SnakeCase.Convert("  Hello World  ");
+        result += SnakeCase.Convert("HelloWorldExample");
+        result += SnakeCase.Convert("hello_world_example");
+        result += SnakeCase.Convert("Hello-World-Example");
+        result += SnakeCase.Convert("Hello.World.Example");
+        result += SnakeCase.Convert(" \t\r\n");
+        result += SnakeCase.Convert("XMLRequest");
+        result += SnakeCase.Convert("_Hello.World.Example");
+        result += SnakeCase.Convert("Hello.World.Example_");
+        result += SnakeCase.Convert("HelloWorldExamplE");
         return result;
     }
 

@@ -1,11 +1,11 @@
-namespace ALSI.CaseConversions.PascalCase;
+namespace ALSI.CaseConversions;
 
 using System;
 
 /// <summary>
 /// For formatting strings to PascalCase.
 /// </summary>
-public static class Converter
+public static class PascalCase
 {
     /// <summary>
     /// Converts the specified string to PascalCase.
@@ -13,5 +13,5 @@ public static class Converter
     /// <param name="stringToConvert">The string to convert.</param>
     /// <returns>Pascal case version of the string.</returns>
     public static string Convert(ReadOnlySpan<char> stringToConvert) =>
-        Converter<PascalCaseConverter>.ConvertCase(stringToConvert);
+        ConversionEngine<PascalCaseConverter>.ConvertCase(stringToConvert);
 }

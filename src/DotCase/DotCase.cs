@@ -1,11 +1,11 @@
-namespace ALSI.CaseConversions.DotCase;
+namespace ALSI.CaseConversions;
 
 using System;
 
 /// <summary>
 /// For formatting strings to dot.case.
 /// </summary>
-public static class Converter
+public static class DotCase
 {
     /// <summary>
     /// Converts the specified string to dot.case.
@@ -13,5 +13,5 @@ public static class Converter
     /// <param name="stringToConvert">The string to convert.</param>
     /// <returns>Dot case version of the string.</returns>
     public static string Convert(ReadOnlySpan<char> stringToConvert) =>
-        Converter<DotCaseConverter>.ConvertCase(stringToConvert);
+        ConversionEngine<DotCaseConverter>.ConvertCase(stringToConvert);
 }

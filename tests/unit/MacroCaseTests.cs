@@ -1,7 +1,7 @@
 ﻿namespace ALSI.CaseConversions.UnitTests;
 
+using ALSI.CaseConversions;
 using FluentAssertions;
-using static ALSI.CaseConversions.MacroCase.Converter;
 
 public class MacroCaseTests
 {
@@ -14,7 +14,7 @@ public class MacroCaseTests
         var expected = "HELLO";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -28,7 +28,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -41,7 +41,7 @@ public class MacroCaseTests
         var input = string.Empty;
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().BeEmpty();
@@ -54,7 +54,7 @@ public class MacroCaseTests
         string? input = null;
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(string.Empty);
@@ -68,7 +68,7 @@ public class MacroCaseTests
         var expected = "A";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -82,7 +82,7 @@ public class MacroCaseTests
         var expected = "AA";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -96,7 +96,7 @@ public class MacroCaseTests
         var expected = "CAMEL_CASE_INPUT";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -110,7 +110,7 @@ public class MacroCaseTests
         var expected = "PASCAL_CASE_INPUT";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -124,7 +124,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -140,7 +140,7 @@ public class MacroCaseTests
         var expected = "FILE123_NAME";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -154,7 +154,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -168,7 +168,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -182,7 +182,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -196,7 +196,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD_EXAMPLE";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -210,7 +210,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD_EXAMPLE";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -224,7 +224,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD_EXAMPLE";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -241,7 +241,7 @@ public class MacroCaseTests
         var expected = "";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -255,7 +255,7 @@ public class MacroCaseTests
         var expected = "XML_REQUEST";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -269,7 +269,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD_EXAMPLE";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -283,7 +283,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD_EXAMPLE";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -297,7 +297,7 @@ public class MacroCaseTests
         var expected = "HELLO_WORLD_EXAMPL_E";
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -311,7 +311,7 @@ public class MacroCaseTests
         var expected = string.Concat(Enumerable.Repeat("HELLO_WORLD_EXAMPLE_", 16))[..^1];
 
         // Act
-        var result = Convert(input);
+        var result = MacroCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);

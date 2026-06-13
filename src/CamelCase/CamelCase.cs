@@ -1,11 +1,11 @@
-namespace ALSI.CaseConversions.CamelCase;
+namespace ALSI.CaseConversions;
 
 using System;
 
 /// <summary>
 /// For formatting strings to camelCase.
 /// </summary>
-public static class Converter
+public static class CamelCase
 {
     /// <summary>
     /// Converts the specified string to camelCase.
@@ -13,5 +13,5 @@ public static class Converter
     /// <param name="stringToConvert">The string to convert.</param>
     /// <returns>Camel case version of the string.</returns>
     public static string Convert(ReadOnlySpan<char> stringToConvert) =>
-        Converter<CamelCaseConverter>.ConvertCase(stringToConvert);
+        ConversionEngine<CamelCaseConverter>.ConvertCase(stringToConvert);
 }

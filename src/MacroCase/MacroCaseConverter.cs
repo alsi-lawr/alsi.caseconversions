@@ -1,6 +1,4 @@
-﻿namespace ALSI.CaseConversions.MacroCase;
-
-using ALSI.CaseConversions;
+namespace ALSI.CaseConversions;
 
 internal readonly struct MacroCaseConverter : ICaseConverter
 {

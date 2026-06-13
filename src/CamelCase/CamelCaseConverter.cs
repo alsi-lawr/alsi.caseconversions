@@ -1,6 +1,4 @@
-namespace ALSI.CaseConversions.CamelCase;
-
-using ALSI.CaseConversions;
+namespace ALSI.CaseConversions;
 
 internal readonly struct CamelCaseConverter : ICaseConverter
 {

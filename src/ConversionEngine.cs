@@ -5,7 +5,7 @@ using System.Buffers;
 using System.Runtime.CompilerServices;
 using static ALSI.CaseConversions.ASCIICaseCheck;
 
-internal static class Converter<TConverter>
+internal static class ConversionEngine<TConverter>
     where TConverter : ICaseConverter
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]

@@ -1,7 +1,7 @@
 namespace ALSI.CaseConversions.UnitTests;
 
+using ALSI.CaseConversions;
 using FluentAssertions;
-using static ALSI.CaseConversions.SentenceCase.Converter;
 
 public class SentenceCaseTests
 {
@@ -14,7 +14,7 @@ public class SentenceCaseTests
         var expected = "Hello";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -28,7 +28,7 @@ public class SentenceCaseTests
         var expected = "Hello World";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -41,7 +41,7 @@ public class SentenceCaseTests
         var input = string.Empty;
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().BeEmpty();
@@ -54,7 +54,7 @@ public class SentenceCaseTests
         string? input = null;
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(string.Empty);
@@ -68,7 +68,7 @@ public class SentenceCaseTests
         var expected = "A";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -82,7 +82,7 @@ public class SentenceCaseTests
         var expected = "AA";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -96,7 +96,7 @@ public class SentenceCaseTests
         var expected = "camel Case Input";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -110,7 +110,7 @@ public class SentenceCaseTests
         var expected = "Pascal Case Input";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -124,7 +124,7 @@ public class SentenceCaseTests
         var expected = "HELLO WORLD";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -140,7 +140,7 @@ public class SentenceCaseTests
         var expected = "File123 Name";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -154,7 +154,7 @@ public class SentenceCaseTests
         var expected = "Hello World";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -168,7 +168,7 @@ public class SentenceCaseTests
         var expected = "Hello World";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -182,7 +182,7 @@ public class SentenceCaseTests
         var expected = "Hello World";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -196,7 +196,7 @@ public class SentenceCaseTests
         var expected = "hello world example";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -210,7 +210,7 @@ public class SentenceCaseTests
         var expected = "Hello World Example";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -224,7 +224,7 @@ public class SentenceCaseTests
         var expected = "Hello World Example";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -241,7 +241,7 @@ public class SentenceCaseTests
         var expected = "";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -255,7 +255,7 @@ public class SentenceCaseTests
         var expected = "XML Request";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -269,7 +269,7 @@ public class SentenceCaseTests
         var expected = "Hello World Example";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -283,7 +283,7 @@ public class SentenceCaseTests
         var expected = "Hello World Example";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -297,7 +297,7 @@ public class SentenceCaseTests
         var expected = "Hello World Exampl E";
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -311,7 +311,7 @@ public class SentenceCaseTests
         var expected = string.Concat(Enumerable.Repeat("Hello World Example ", 16))[..^1];
 
         // Act
-        var result = Convert(input);
+        var result = SentenceCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);

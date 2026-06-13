@@ -1,6 +1,4 @@
-namespace ALSI.CaseConversions.KebabCase;
-
-using ALSI.CaseConversions;
+namespace ALSI.CaseConversions;
 
 internal readonly struct KebabCaseConverter : ICaseConverter
 {

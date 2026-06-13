@@ -1,7 +1,7 @@
 ﻿namespace ALSI.CaseConversions.UnitTests;
 
+using ALSI.CaseConversions;
 using FluentAssertions;
-using static ALSI.CaseConversions.PascalCase.Converter;
 
 public class PascalCaseTests
 {
@@ -15,7 +15,7 @@ public class PascalCaseTests
         var expected = "Hello";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -29,7 +29,7 @@ public class PascalCaseTests
         var expected = "HelloWorld";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -42,7 +42,7 @@ public class PascalCaseTests
         var input = string.Empty;
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().BeEmpty();
@@ -55,7 +55,7 @@ public class PascalCaseTests
         string? input = null;
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(string.Empty);
@@ -69,7 +69,7 @@ public class PascalCaseTests
         var expected = "A";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -83,7 +83,7 @@ public class PascalCaseTests
         var expected = "Aa";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -97,7 +97,7 @@ public class PascalCaseTests
         var expected = "SnakeCaseInput";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -111,7 +111,7 @@ public class PascalCaseTests
         var expected = "CamelCaseInput";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -125,7 +125,7 @@ public class PascalCaseTests
         var expected = "HelloWorld";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -143,7 +143,7 @@ public class PascalCaseTests
         var expected = "File123Name";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -157,7 +157,7 @@ public class PascalCaseTests
         var expected = "Helloworld";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -171,7 +171,7 @@ public class PascalCaseTests
         var expected = "HelloWorld";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -185,7 +185,7 @@ public class PascalCaseTests
         var expected = "HelloWorld";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -199,7 +199,7 @@ public class PascalCaseTests
         var expected = "HelloWorldExample";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -213,7 +213,7 @@ public class PascalCaseTests
         var expected = "HelloWorldExample";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -227,7 +227,7 @@ public class PascalCaseTests
         var expected = "HelloWorldExample";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -241,7 +241,7 @@ public class PascalCaseTests
         var expected = "HelloWorldExample";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -259,7 +259,7 @@ public class PascalCaseTests
         var expected = "";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -273,7 +273,7 @@ public class PascalCaseTests
         var expected = "XmlRequest";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -287,7 +287,7 @@ public class PascalCaseTests
         var expected = "HelloWorldExample";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -301,7 +301,7 @@ public class PascalCaseTests
         var expected = "HelloWorldExample";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -315,7 +315,7 @@ public class PascalCaseTests
         var expected = "HelloWorldExamplE";
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);
@@ -329,7 +329,7 @@ public class PascalCaseTests
         var expected = string.Concat(Enumerable.Repeat("HelloWorldExample", 16));
 
         // Act
-        var result = Convert(input);
+        var result = PascalCase.Convert(input);
 
         // Assert
         result.Should().Be(expected);

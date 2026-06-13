@@ -1,6 +1,4 @@
-namespace ALSI.CaseConversions.DotCase;
-
-using ALSI.CaseConversions;
+namespace ALSI.CaseConversions;
 
 internal readonly struct DotCaseConverter : ICaseConverter
 {
