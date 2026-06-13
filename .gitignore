@@ -365,6 +365,7 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Settings/System.Configuration.ConfigurationManager.dll
-TLC.Settings/doc
 tests/unit/report
 **/lcov*.cobertura.xml
+
+.agent-workspace
