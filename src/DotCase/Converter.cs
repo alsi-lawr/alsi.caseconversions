@@ -12,5 +12,6 @@ public static class Converter
     /// </summary>
     /// <param name="stringToConvert">The string to convert.</param>
     /// <returns>Dot case version of the string.</returns>
-    public static string Convert(ReadOnlySpan<char> stringToConvert) => Converter<DotCaseConverter>.ConvertCase(stringToConvert);
+    public static string Convert(ReadOnlySpan<char> stringToConvert) =>
+        Converter<DotCaseConverter>.ConvertCase(stringToConvert);
 }

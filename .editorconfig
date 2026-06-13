@@ -1,4 +1,4 @@
-is_global = true
+[*.cs]
 dotnet_diagnostic.SA1101.severity = none
 dotnet_diagnostic.SA1309.severity = none
 dotnet_diagnostic.SA1310.severity = none
@@ -151,4 +151,4 @@ dotnet_diagnostic.SA1117.severity=warning
 # SA1118: Argument must begin on the next line if the parameter list spans multiple lines
 dotnet_diagnostic.SA1118.severity=warning
 
-max_line_length=130
+max_line_length=100
