@@ -11,7 +11,7 @@ internal readonly struct MacroCaseConverter : ICaseConverter
     )
     {
         destinationBuffer[charsWritten++] = USCORE;
-        destinationBuffer[charsWritten++] = ASCIICaseCheck.ToUpper(charToConvert);
+        destinationBuffer[charsWritten++] = AsciiCaseCheck.ToUpper(charToConvert);
     }
 
     public static void UnseparatedConversion(
@@ -20,7 +20,7 @@ internal readonly struct MacroCaseConverter : ICaseConverter
         in char charToConvert
     )
     {
-        destinationBuffer[charsWritten++] = ASCIICaseCheck.ToUpper(charToConvert);
+        destinationBuffer[charsWritten++] = AsciiCaseCheck.ToUpper(charToConvert);
     }
 
     public static void FirstCharConversion(
@@ -29,6 +29,6 @@ internal readonly struct MacroCaseConverter : ICaseConverter
         in char charToConvert
     )
     {
-        destinationBuffer[charsWritten++] = ASCIICaseCheck.ToUpper(charToConvert);
+        destinationBuffer[charsWritten++] = AsciiCaseCheck.ToUpper(charToConvert);
     }
 }

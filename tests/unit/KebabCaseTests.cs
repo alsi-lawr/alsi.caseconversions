@@ -52,7 +52,7 @@ public class KebabCaseTests
     public void ConvertString_NullInput_ReturnsEmptyString()
     {
         // Arrange
-        string? input = null;
+        string input = null!;
 
         // Act
         var result = KebabCase.Convert(input);

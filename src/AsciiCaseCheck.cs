@@ -3,7 +3,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-internal static class ASCIICaseCheck
+internal static class AsciiCaseCheck
 {
     public const char NUL = (char)0x00;
     private const byte UpperCaseFlag = 0x01;

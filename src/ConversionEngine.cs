@@ -3,7 +3,7 @@ namespace ALSI.CaseConversions;
 using System;
 using System.Buffers;
 using System.Runtime.CompilerServices;
-using static ALSI.CaseConversions.ASCIICaseCheck;
+using static ALSI.CaseConversions.AsciiCaseCheck;
 
 internal static class ConversionEngine<TConverter>
     where TConverter : ICaseConverter

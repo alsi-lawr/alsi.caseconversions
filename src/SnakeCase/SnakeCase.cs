@@ -1,17 +1,27 @@
 namespace ALSI.CaseConversions;
 
 using System;
+using System.Runtime.CompilerServices;
 
 /// <summary>
-/// For formatting strings to snake_case.
+/// Converts identifier-like text to snake_case.
 /// </summary>
-public static class SnakeCase
+public readonly struct SnakeCase : ICaseConversion
 {
     /// <summary>
     /// Converts the specified string to snake_case.
     /// </summary>
     /// <param name="stringToConvert">The string to convert.</param>
-    /// <returns>Snake case version of the string.</returns>
+    /// <returns>The snake_case conversion.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static string Convert(string stringToConvert) => Convert(stringToConvert.AsSpan());
+
+    /// <summary>
+    /// Converts the specified characters to snake_case.
+    /// </summary>
+    /// <param name="stringToConvert">The characters to convert.</param>
+    /// <returns>The snake_case conversion.</returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static string Convert(ReadOnlySpan<char> stringToConvert) =>
         ConversionEngine<SnakeCaseConverter>.ConvertCase(stringToConvert);
 }

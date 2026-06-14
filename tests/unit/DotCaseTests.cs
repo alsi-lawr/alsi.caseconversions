@@ -52,7 +52,7 @@ public class DotCaseTests
     public void ConvertString_NullInput_ReturnsEmptyString()
     {
         // Arrange
-        string? input = null;
+        string input = null!;
 
         // Act
         var result = DotCase.Convert(input);

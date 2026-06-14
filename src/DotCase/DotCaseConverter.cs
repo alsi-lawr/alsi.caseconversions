@@ -11,7 +11,7 @@ internal readonly struct DotCaseConverter : ICaseConverter
     )
     {
         destinationBuffer[charsWritten++] = DOT;
-        destinationBuffer[charsWritten++] = ASCIICaseCheck.ToLower(charToConvert);
+        destinationBuffer[charsWritten++] = AsciiCaseCheck.ToLower(charToConvert);
     }
 
     public static void UnseparatedConversion(
@@ -20,7 +20,7 @@ internal readonly struct DotCaseConverter : ICaseConverter
         in char charToConvert
     )
     {
-        destinationBuffer[charsWritten++] = ASCIICaseCheck.ToLower(charToConvert);
+        destinationBuffer[charsWritten++] = AsciiCaseCheck.ToLower(charToConvert);
     }
 
     public static void FirstCharConversion(
@@ -29,6 +29,6 @@ internal readonly struct DotCaseConverter : ICaseConverter
         in char charToConvert
     )
     {
-        destinationBuffer[charsWritten++] = ASCIICaseCheck.ToLower(charToConvert);
+        destinationBuffer[charsWritten++] = AsciiCaseCheck.ToLower(charToConvert);
     }
 }

@@ -51,7 +51,7 @@ public class SnakeCaseTests
     public void ConvertString_NullInput_ReturnsEmptyString()
     {
         // Arrange
-        string? input = null;
+        string input = null!;
 
         // Act
         var result = SnakeCase.Convert(input);
