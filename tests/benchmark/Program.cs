@@ -1,9 +1,4 @@
-﻿using System.Buffers;
-using System.Globalization;
-using ALSI.CaseConversions;
-using ALSI.CaseConversions.IntegrationTests;
+using System.Reflection;
 using BenchmarkDotNet.Running;
 
-BenchmarkRunner.Run<SnakeCaseFormatterTests>();
-
-// ALSI.CaseConversions.SnakeCase.Convert("Test String");
+BenchmarkSwitcher.FromAssembly(Assembly.GetExecutingAssembly()).Run(args);
