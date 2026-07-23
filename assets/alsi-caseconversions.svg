@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title description">
+  <title id="title">ALSI.CaseConversions</title>
+  <desc id="description">Identifier tokens changing cleanly between naming conventions.</desc>
+  <defs>
+    <linearGradient id="case" x1="43" y1="44" x2="215" y2="213" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect x="18" y="18" width="220" height="220" rx="48" fill="#161329"/>
+  <rect x="40" y="55" width="78" height="58" rx="18" fill="#252044" stroke="#a78bfa" stroke-width="6"/>
+  <text x="79" y="94" text-anchor="middle" fill="#f5f3ff" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="34" font-weight="700">Aa</text>
+  <rect x="138" y="143" width="78" height="58" rx="18" fill="#172d3c" stroke="#38bdf8" stroke-width="6"/>
+  <text x="177" y="182" text-anchor="middle" fill="#e0f2fe" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="30" font-weight="700">a_a</text>
+  <path d="M118 73h35c20 0 36 16 36 36v11" fill="none" stroke="url(#case)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M174 107l15 15 15-15M138 183h-35c-20 0-36-16-36-36v-11" fill="none" stroke="url(#case)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 149l-15-15-15 15" fill="none" stroke="#a78bfa" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

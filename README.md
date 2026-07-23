@@ -1,11 +1,13 @@
 <div align="center">
 
+<img src="assets/alsi-caseconversions.svg" width="128" height="128" alt="ALSI.CaseConversions logo">
+
 # ALSI.CaseConversions
 
-[![NuGet Version](https://img.shields.io/nuget/v/ALSI.CaseConversions.svg?style=flat)](https://www.nuget.org/packages/ALSI.CaseConversions/)
-[![Build Status](https://github.com/alsi-lawr/alsi.caseconversions/actions/workflows/deploy-nuget.yml/badge.svg)](https://github.com/alsi-lawr/ALSI.CaseConversions/actions)
-[![Downloads](https://img.shields.io/nuget/dt/ALSI.CaseConversions.svg?logo=nuget&logoSize=auto)](https://www.nuget.org/packages/ALSI.CaseConversions)
-[![codecov](https://codecov.io/gh/alsi-lawr/alsi.caseconversions/graph/badge.svg)](https://codecov.io/gh/alsi-lawr/alsi.caseconversions)
+[![Unit tests](https://github.com/alsi-lawr/alsi.caseconversions/actions/workflows/unit-test.yml/badge.svg?branch=master)](https://github.com/alsi-lawr/alsi.caseconversions/actions/workflows/unit-test.yml)
+[![NuGet version](https://img.shields.io/nuget/v/ALSI.CaseConversions.svg)](https://www.nuget.org/packages/ALSI.CaseConversions/)
+[![NuGet downloads](https://img.shields.io/nuget/dt/ALSI.CaseConversions.svg?logo=nuget)](https://www.nuget.org/packages/ALSI.CaseConversions)
+[![Coverage](https://codecov.io/gh/alsi-lawr/alsi.caseconversions/graph/badge.svg)](https://codecov.io/gh/alsi-lawr/alsi.caseconversions)
 
 **Convert naming conventions without ceremony.**
 
